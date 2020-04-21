@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  explosionPrefab: {fileID: 9054721248809211520, guid: bfe99ff3806acb34b91ec5a56500d6d3,
+    type: 3}
 --- !u!54 &5153957073377856142
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,7 +152,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5153957073377856131}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.25
