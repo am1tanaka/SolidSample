@@ -25,8 +25,14 @@ namespace SolidSample
         {
             if (other.CompareTag("Enemy"))
             {
-                Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
-                Destroy(other.gameObject);
+                Enemy en = other.GetComponent<Enemy>();
+                en.hp--;
+                if (en.hp <= 0)
+                {
+                    Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+                    Destroy(other.gameObject);
+                }
+
                 Destroy(gameObject);
             }
         }
