@@ -16,7 +16,7 @@ namespace SolidSample
         private void Awake()
         {
             Rigidbody rb = GetComponent<Rigidbody>();
-            rb.velocity = Vector3.right * speed;
+            rb.velocity = transform.right * speed;
             Destroy(gameObject, LifeTime);
         }
 
