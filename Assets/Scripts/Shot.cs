@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SolidSample
 {
@@ -9,15 +6,14 @@ namespace SolidSample
     {
         [Tooltip("ショット速度"), SerializeField]
         float speed = 15f;
+        [Tooltip("攻撃力"), SerializeField]
+        int power = 1;
         [Tooltip("爆発プレハブ"), SerializeField]
         GameObject explosionPrefab = null;
 
-
-        Rigidbody rb = null;
-
         private void Awake()
         {
-            rb = GetComponent<Rigidbody>();
+            Rigidbody rb = GetComponent<Rigidbody>();
             rb.velocity = Vector3.right * speed;
         }
 
@@ -26,7 +22,7 @@ namespace SolidSample
             if (other.CompareTag("Enemy"))
             {
                 Enemy en = other.GetComponent<Enemy>();
-                en.hp--;
+                en.hp -= power;
                 if (en.hp <= 0)
                 {
                     Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
