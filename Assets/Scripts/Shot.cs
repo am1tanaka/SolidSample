@@ -11,10 +11,13 @@ namespace SolidSample
         [Tooltip("爆発プレハブ"), SerializeField]
         GameObject explosionPrefab = null;
 
+        const float LifeTime = 3;
+
         private void Awake()
         {
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.velocity = Vector3.right * speed;
+            Destroy(gameObject, LifeTime);
         }
 
         private void OnTriggerEnter(Collider other)
