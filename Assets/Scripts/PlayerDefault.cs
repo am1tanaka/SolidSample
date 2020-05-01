@@ -33,10 +33,7 @@ namespace SolidSample
                 Shot();
             }
 
-            Vector3 mpos = Input.mousePosition;
-            mpos.z = transform.position.z
-                - gameCamera.transform.position.z;
-            targetPosition = gameCamera.ScreenToWorldPoint(mpos);
+            UpdateMove();
         }
 
         /// <summary>
@@ -46,6 +43,14 @@ namespace SolidSample
         {
             Instantiate(shotPrefab, transform.position,
                 Quaternion.identity);
+        }
+
+        void UpdateMove()
+        {
+            Vector3 mpos = Input.mousePosition;
+            mpos.z = transform.position.z
+                - gameCamera.transform.position.z;
+            targetPosition = gameCamera.ScreenToWorldPoint(mpos);
         }
 
         private void FixedUpdate()
