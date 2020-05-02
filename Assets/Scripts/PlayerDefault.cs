@@ -1,39 +1,52 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SolidSample
 {
     public class PlayerDefault : MonoBehaviour
     {
         [Tooltip("移動速度"), SerializeField]
-        float speed = 10f;
+        protected float speed = 10f;
         [Tooltip("ショットプレハブ"), SerializeField]
-        Shot shotPrefab = null;
+        protected Shot shotPrefab = null;
 
         /// <summary>
         /// 移動目的座標を設定します。
         /// </summary>
         public Vector3 targetPosition;
 
-        Rigidbody rb = null;
+        protected Rigidbody rb = null;
         Camera gameCamera = null;
 
-        private void Awake()
+        void Awake()
         {
             rb = GetComponent<Rigidbody>();
             targetPosition = transform.position;
             gameCamera = Camera.main;
         }
 
-        private void Update()
+        void Update()
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire2"))
+            {
+                RightButton();
+            }
+            else if (Input.GetButtonDown("Fire1"))
             {
                 Shot();
             }
 
             UpdateMove();
+        }
+
+        /// <summary>
+        /// 右ボタンが押されていたら呼び出します。
+        /// </summary>
+        protected virtual void RightButton()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shot();
+            }
         }
 
         /// <summary>
@@ -45,7 +58,7 @@ namespace SolidSample
                 Quaternion.identity);
         }
 
-        void UpdateMove()
+        protected void UpdateMove()
         {
             Vector3 mpos = Input.mousePosition;
             mpos.z = transform.position.z
