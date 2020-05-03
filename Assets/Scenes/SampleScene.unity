@@ -168,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226289956}
   - component: {fileID: 226289954}
+  - component: {fileID: 226289955}
   - component: {fileID: 226289953}
   m_Layer: 8
   m_Name: Player
@@ -197,9 +198,24 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 226289952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5965416c5d4d38f47aa4a4b574ef7d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  shotPrefab: {fileID: 114435540096138864, guid: 6e40c7fc43f113441b4abc0a5ec2a6dc,
+    type: 2}
+  targetPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &226289955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226289952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6deec0d2e23ea40afb0b2af2c995ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
