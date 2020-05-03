@@ -26,13 +26,16 @@ namespace SolidSample
 
         void Update()
         {
-            if (Input.GetButton("Fire2"))
+            if (Input.GetButtonDown("Fire1"))
             {
-                RightButton();
-            }
-            else if (Input.GetButtonDown("Fire1"))
-            {
-                Shot();
+                if (Input.GetButton("Fire2"))
+                {
+                    RightButtonShot();
+                }
+                else
+                {
+                    Shot();
+                }
             }
 
             UpdateMove();
@@ -41,12 +44,9 @@ namespace SolidSample
         /// <summary>
         /// 右ボタンが押されていたら呼び出します。
         /// </summary>
-        protected virtual void RightButton()
+        protected virtual void RightButtonShot()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Shot();
-            }
+            Shot();
         }
 
         /// <summary>
