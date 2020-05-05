@@ -2,7 +2,7 @@
 
 namespace SolidSample
 {
-    public class Shot : MonoBehaviour
+    public class ShotNG : MonoBehaviour
     {
         [Tooltip("ショット速度"), SerializeField]
         float speed = 15f;
@@ -23,6 +23,12 @@ namespace SolidSample
             if (other.CompareTag("Enemy"))
             {
                 Enemy en = other.GetComponent<Enemy>();
+                en.Damage(power);
+                Destroy(gameObject);
+            }
+            else if (other.CompareTag("EnemyB"))
+            {
+                EnemyB en = other.GetComponent<EnemyB>();
                 en.Damage(power);
                 Destroy(gameObject);
             }

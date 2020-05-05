@@ -9,7 +9,7 @@ namespace SolidSample
         [Tooltip("移動速度"), SerializeField]
         float speed = 10f;
         [Tooltip("ショットプレハブ"), SerializeField]
-        Shot shotPrefab = null;
+        GameObject shotPrefab = null;
 
         /// <summary>
         /// 移動目的座標を設定します。
