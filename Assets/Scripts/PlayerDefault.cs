@@ -30,7 +30,7 @@ namespace SolidSample
             {
                 if (Input.GetButton("Fire2"))
                 {
-                    RightButtonShot();
+                    SpecialShot();
                 }
                 else
                 {
@@ -44,7 +44,7 @@ namespace SolidSample
         /// <summary>
         /// 右ボタンが押されていたら呼び出します。
         /// </summary>
-        protected virtual void RightButtonShot()
+        protected virtual void SpecialShot()
         {
             Shot();
         }

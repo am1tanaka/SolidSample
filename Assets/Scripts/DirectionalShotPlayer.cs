@@ -4,7 +4,7 @@ namespace SolidSample
 {
 	public class DirectionalShotPlayer : PlayerDefault
 	{
-		protected override void RightButtonShot()
+		protected override void SpecialShot()
 		{
 			float rotz = Vector3.SignedAngle(
 				Vector3.right,
