@@ -14,7 +14,7 @@ namespace SolidSample
         /// </summary>
         public int hp = 2;
 
-        public void Damage(int damage)
+        public virtual void Damage(int damage)
         {
             hp -= damage;
             if (hp <= 0)
