@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 135481144405798622}
   m_Layer: 10
   m_Name: EnemyB
-  m_TagString: EnemyB
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1711633396775966, guid: bfe99ff3806acb34b91ec5a56500d6d3,
     type: 2}
+  hp: 4
   maxSpeed: 4
   rollingTime: 2
 --- !u!135 &135481144405798622

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4717400242678580}
-  - component: {fileID: 114203409038608788}
+  - component: {fileID: 114514979541504714}
   - component: {fileID: 54970231491874640}
   - component: {fileID: 135760343300151242}
   m_Layer: 9
@@ -130,7 +130,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &114203409038608788
+--- !u!114 &114514979541504714
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279953568946522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18640d8c00167e44eb685e2ce354d32a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3440e38da3ceb3348ad6939747ee0b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
