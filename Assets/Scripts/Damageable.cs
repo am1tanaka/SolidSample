@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace SolidSample
 {
-    public class Enemy : MonoBehaviour
+    public class Damageable : MonoBehaviour
     {
         [Tooltip("爆発プレハブ"), SerializeField]
         GameObject explosionPrefab = null;
+        [Tooltip("得点"), SerializeField]
+        int point = 100;
 
         /// <summary>
         /// ヒットポイント
@@ -21,6 +23,7 @@ namespace SolidSample
             {
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                GameManager.Instance.AddScore(point);
             }
         }
     }

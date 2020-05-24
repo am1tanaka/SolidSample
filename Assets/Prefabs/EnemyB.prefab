@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237486951384924}
   - component: {fileID: 114521228533350690}
+  - component: {fileID: 114554574160827884}
   - component: {fileID: 54370573734985060}
   - component: {fileID: 135481144405798622}
   m_Layer: 10
@@ -141,11 +142,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e56968ceadbb547bfa5d1affba0f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 1711633396775966, guid: bfe99ff3806acb34b91ec5a56500d6d3,
-    type: 2}
-  hp: 4
   maxSpeed: 4
   rollingTime: 2
+--- !u!114 &114554574160827884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811391991385118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fcb0d359e8a664ba2acd3984fa36b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1711633396775966, guid: bfe99ff3806acb34b91ec5a56500d6d3,
+    type: 2}
+  hp: 2
 --- !u!135 &135481144405798622
 SphereCollider:
   m_ObjectHideFlags: 1

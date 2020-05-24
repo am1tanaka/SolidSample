@@ -22,9 +22,12 @@ namespace SolidSample
         {
             if (other.CompareTag("Enemy"))
             {
-                Enemy en = other.GetComponent<Enemy>();
-                en.Damage(power);
-                Destroy(gameObject);
+                Damageable en = other.GetComponent<Damageable>();
+                if (en != null)
+                {
+                    en.Damage(power);
+                    Destroy(gameObject);
+                }
             }
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SolidSample
 {
-    public class EnemyB : Enemy
+    public class EnemyB : MonoBehaviour
     {
         [Tooltip("最高速度"), SerializeField]
         float maxSpeed = 4;
